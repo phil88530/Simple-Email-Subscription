@@ -7,5 +7,5 @@
   4. To manually unsubscribe an email, simply go to Settings -> simple email subscriber, and unsubscribe/add the email address you want. 
 
 
-![Profile picture](example/demo1.png)
-![Profile picture](example/demo1.png)
+![demo picture1](https://github.com/phil88530/Simple-Email-Subscription/blob/master/example/demo1.png)
+![demo picture2](https://github.com/phil88530/Simple-Email-Subscription/blob/master/example/demo2.png)
