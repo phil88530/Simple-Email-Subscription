@@ -1,5 +1,9 @@
 #Wordpress - Simple Email Subscription Plugin#
 
+Requires user to register for email subscription is a pain: lots blogs doesn't allow user to register even.
+
+The simple email subscriber plugin allows user to register their email to the wordpress subscription list, and it's flexible that user can always un-subscribe through click the unsubscribe email link.
+
 ##Usage:##
   1. Download the plugin into the plugin folder 
   2. Activate it through the plugins panel
