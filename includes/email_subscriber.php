@@ -72,6 +72,12 @@ class email_subscriber{
     //get post information
     $post = get_post($post_id);
 
+    $notification_email_sent = get_post_meta($post_id,SES_EMAIL_SENT_META, true);
+    error_log($notification_email_sent);
+    if($notification_email_sent != ''){
+      return;
+    }
+
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return false;
     if ($post->post_status != "publish") return;
 
@@ -87,7 +93,7 @@ class email_subscriber{
     $email_content = get_the_author_meta( 'display_name', $post->post_author )." has published a new post on $blog_name: ".$post->post_title;
     $email_content .= "<br/> <a href='".get_permalink($post->ID)."'> Check this new post </a>";
     $email_content .= "<br /> If you no longer wants to receive this update, you can ";
-    $email_content .= "<a href='".get_site_url()."?unsubscribe=true'> unsubscribe </a>";
+    $email_content .= "<a href='".get_site_url()."?unsubscribe=true&email=$from_email'> unsubscribe </a>";
 
     //fetch all the subscribed emails
     $subscription_list = $this->fetch_subscription_list();
@@ -96,6 +102,9 @@ class email_subscriber{
     foreach($subscription_list as $subscriber){
       wp_mail($subscriber->email,$email_title, $email_content, $headers); 
     }
+
+    //update the email meta to ensure not email anymore in the future
+    update_post_meta($post->ID, SES_EMAIL_SENT_META, "1", true);
   }
 }
 ?>

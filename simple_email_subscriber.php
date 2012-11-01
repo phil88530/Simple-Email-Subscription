@@ -42,6 +42,7 @@ function setup_plugin_actions(){
     $simple_email_subscriber = new email_subscriber();
     //add action listener to post publication
     add_action('publish_post', array($simple_email_subscriber, 'on_publish_post'));
+    add_action('publish__future_post', array($simple_email_subscriber, 'on_publish_post'));
   }
 
   //add the admin menu pages
