@@ -9,3 +9,4 @@
 
 ![demo picture1](https://raw.github.com/phil88530/Simple-Email-Subscription/master/example/demo1.png)
 ![demo picture2](https://raw.github.com/phil88530/Simple-Email-Subscription/master/example/demo2.png)
+![demo picture3](https://raw.github.com/phil88530/Simple-Email-Subscription/master/example/demo3.png)
