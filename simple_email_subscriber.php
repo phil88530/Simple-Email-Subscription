@@ -1,12 +1,12 @@
 <?php
 /*  Copyright 2012  YuFei Zhu  (email : support@phil88530.com)
     Plugin Name: Simple Email Subscriber
-    Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
+    Plugin URI: https://github.com/phil88530/Simple-Email-Subscription
     Version: 1.0
     Description: <strong> Simple Email Subscriber </strong> allows you blogger to get email subscribe when a new post is published. You can unsubscripe the post through the receving email.
     Usage:  Simply activate the plugin after putting the source folder into the wordpress plugins folder
     Author: YuFei Zhu
-    Author URI: http://URI_Of_The_Plugin_Author
+    Author URI: http://phil88530.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
