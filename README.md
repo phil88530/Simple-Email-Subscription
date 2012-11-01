@@ -6,3 +6,6 @@
   3. Go to widget panel, and add the widget to your page(with fill in Subscription hint and successful message content
   4. To manually unsubscribe an email, simply go to Settings -> simple email subscriber, and unsubscribe/add the email address you want. 
 
+
+![Profile picture](example/demo1.png)
+![Profile picture](example/demo1.png)
