@@ -24,7 +24,7 @@ class simple_email_subscription_widget {
       type="text" value="<?php echo $data['subscription_hint']; ?>" /></label></p>
 
   <p><label>Success Message: </label></p>
-    <textarea name="ses_success_msg" cols="35" rows="4"
+    <textarea name="ses_success_msg" cols="30" rows="4"
     type="text" > <?php echo $data['success_msg']; ?> </textarea>  
   <?php
    if (isset($_POST['ses_subscription_hint'])){
@@ -36,7 +36,7 @@ class simple_email_subscription_widget {
   function widget($args){
     $subscriber = new email_subscriber();
 
-    $action_url=$_SERVER['REQUEST_URI'];
+    $action_url=get_site_url().$_SERVER['REQUEST_URI'];
     echo $args['before_widget'];
     echo $args['before_title'] . 'Subscription' . $args['after_title'];
     

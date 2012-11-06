@@ -15,7 +15,7 @@
 
 <?php
   //setup the action url is the request url
-  $action_url=$_SERVER['REQUEST_URI'];
+  $action_url=get_site_url().$_SERVER['REQUEST_URI'];
 
   //fetch all subscribers
   $simple_email_subscriber = new email_subscriber();

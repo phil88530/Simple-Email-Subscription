@@ -37,6 +37,9 @@ The plugin is configured to send email whenever a new post is PUBLISHED, that is
 = 1.0 =
 *First version of this plugin
 
+= 1.01 =
+* supports sub-domains or sub-directory blogs
+
 == Upgrade Notice ==
 = 1.0 =
 *first version of the plugin
