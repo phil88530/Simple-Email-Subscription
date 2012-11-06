@@ -9,4 +9,4 @@
 </form>
 
 <br><br>
-You can always unsubscribe through click the unsubscribe link in the email.
+We would like to keep you updated with our blog. You can always stop the updates by clicking the 	&ldquo;unsubscribe&rdquo; link in the emails from us
