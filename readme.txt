@@ -1,6 +1,6 @@
 === Simple Email Subscriber ===
 Contributors: phil88530
-Donate link: http://wordpress.org/extend/plugins/about/svn/
+Donate link: https://github.com/phil88530/Simple-Email-Subscription
 Tags: email, subscription, non-login
 Requires at least: 3.0.1
 Tested up to: 3.4
