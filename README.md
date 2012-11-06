@@ -11,6 +11,6 @@ The simple email subscriber plugin allows user to register their email to the wo
   4. To manually unsubscribe an email, simply go to Settings -> simple email subscriber, and unsubscribe/add the email address you want. 
 
 
-![demo picture1](https://raw.github.com/phil88530/Simple-Email-Subscription/master/example/demo1.png)
-![demo picture2](https://raw.github.com/phil88530/Simple-Email-Subscription/master/example/demo2.png)
-![demo picture3](https://raw.github.com/phil88530/Simple-Email-Subscription/master/example/demo3.png)
+![demo picture1](https://raw.github.com/phil88530/Simple-Email-Subscription/master/screenshot-1.png)
+![demo picture2](https://raw.github.com/phil88530/Simple-Email-Subscription/master/screenshot-2.png)
+![demo picture3](https://raw.github.com/phil88530/Simple-Email-Subscription/master/screenshot-3.png)
