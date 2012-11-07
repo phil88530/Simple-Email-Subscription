@@ -44,5 +44,8 @@ The plugin is configured to send email whenever a new post is PUBLISHED, that is
 *First version of this plugin
 
 == Upgrade Notice ==
+= 1.2 =
+* Fixing bug of unsubscribe link is the from_email issue. (should be to_email)
+
 = 1.0 =
 *first version of the plugin
