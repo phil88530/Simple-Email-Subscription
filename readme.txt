@@ -34,14 +34,14 @@ The plugin is configured to send email whenever a new post is PUBLISHED, that is
 3. what plugin looks like in widget demo3.png
 
 == Changelog ==
-= 1.0 =
-*First version of this plugin
+= 1.2 =
+* Fixing bug of unsubscribe link is the from_email issue. (should be to_email)
 
 = 1.1 =
 * supports sub-domains or sub-directory blogs
 
-= 1.2 =
-* Fixing bug of unsubscribe link is the from_email issue. (should be to_email)
+= 1.0 =
+*First version of this plugin
 
 == Upgrade Notice ==
 = 1.0 =
