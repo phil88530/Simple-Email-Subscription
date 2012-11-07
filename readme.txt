@@ -37,8 +37,11 @@ The plugin is configured to send email whenever a new post is PUBLISHED, that is
 = 1.0 =
 *First version of this plugin
 
-= 1.01 =
+= 1.1 =
 * supports sub-domains or sub-directory blogs
+
+= 1.2 =
+* Fixing bug of unsubscribe link is the from_email issue. (should be to_email)
 
 == Upgrade Notice ==
 = 1.0 =
