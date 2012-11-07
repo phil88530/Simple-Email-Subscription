@@ -93,7 +93,7 @@ class email_subscriber{
     $email_content = get_the_author_meta( 'display_name', $post->post_author )." has published a new post on $blog_name: ".$post->post_title;
     $email_content .= "<br/> <a href='".get_permalink($post->ID)."'> Check this new post </a>";
     $email_content .= "<br /> If you no longer wants to receive this update, you can ";
-    $email_content .= "<a href='".get_site_url()."?unsubscribe=true&email=$from_email'> unsubscribe </a>";
+    $email_content .= "<a href='".get_site_url()."?unsubscribe=true&email=$to_email'> unsubscribe </a>";
 
     //fetch all the subscribed emails
     $subscription_list = $this->fetch_subscription_list();
