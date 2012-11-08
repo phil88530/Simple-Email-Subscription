@@ -2,7 +2,7 @@
 /*  Copyright 2012  YuFei Zhu  (email : support@phil88530.com)
     Plugin Name: Simple Email Subscriber
     Plugin URI: http://wordpress.org/extend/plugins/simple-email-subscriber/
-    Version: 1.2
+    Version: 1.3
     Description: <strong> Simple Email Subscriber </strong> allows you blogger to get email subscribe when a new post is published. You can unsubscripe the post through the receving email.
     Usage:  Simply activate the plugin after putting the source folder into the wordpress plugins folder
     Author: YuFei Zhu

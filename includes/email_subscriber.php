@@ -90,16 +90,16 @@ class email_subscriber{
     $headers  = "MIME-Version: 1.0 \r\n";
 		$headers .= "Content-type: text/html; charset=utf-8 \r\n";
 		$headers .= "From: $blog_name <$from_email>\r\n";			
-    $email_content = get_the_author_meta( 'display_name', $post->post_author )." has published a new post on $blog_name: ".$post->post_title;
-    $email_content .= "<br/> <a href='".get_permalink($post->ID)."'> Check this new post </a>";
-    $email_content .= "<br /> If you no longer wants to receive this update, you can ";
-    $email_content .= "<a href='".get_site_url()."?unsubscribe=true&email=".$subscriber->email."'> unsubscribe </a>";
 
     //fetch all the subscribed emails
     $subscription_list = $this->fetch_subscription_list();
     
     //email each subscriber
     foreach($subscription_list as $subscriber){
+      $email_content = get_the_author_meta( 'display_name', $post->post_author )." has published a new post on $blog_name: ".$post->post_title;
+      $email_content .= "<br/> <a href='".get_permalink($post->ID)."'> Check this new post </a>";
+      $email_content .= "<br /> If you no longer wants to receive this update, you can ";
+      $email_content .= "<a href='".home_url()."?unsubscribe=true&email=".$subscriber->email."'> unsubscribe </a>";
       wp_mail($subscriber->email,$email_title, $email_content, $headers); 
     }
 

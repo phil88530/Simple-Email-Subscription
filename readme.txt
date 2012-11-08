@@ -34,6 +34,10 @@ The plugin is configured to send email whenever a new post is PUBLISHED, that is
 3. what plugin looks like in widget demo3.png
 
 == Changelog ==
+= 1.3 =
+* Fixing bug of wordpress under different repository of site and results 404(Using home_url() instead of get_site_url())
+ 
+
 = 1.2 =
 * Fixing bug of unsubscribe link is the from_email issue. (should be to_email)
 
@@ -44,6 +48,9 @@ The plugin is configured to send email whenever a new post is PUBLISHED, that is
 *First version of this plugin
 
 == Upgrade Notice ==
+= 1.3 =
+* Fixing bug of wordpress under different repository of site and results 404(Using home_url() instead of get_site_url())
+
 = 1.2 =
 * Fixing bug of unsubscribe link is the from_email issue. (should be to_email)
 
