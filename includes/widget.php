@@ -36,7 +36,7 @@ class simple_email_subscription_widget {
   function widget($args){
     $subscriber = new email_subscriber();
 
-    $action_url=get_site_url().$_SERVER['REQUEST_URI'];
+    $action_url=home_url().$_SERVER['REQUEST_URI'];
     echo $args['before_widget'];
     echo $args['before_title'] . 'Subscription' . $args['after_title'];
     
