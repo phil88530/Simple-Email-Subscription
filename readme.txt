@@ -34,6 +34,10 @@ The plugin is configured to send email whenever a new post is PUBLISHED, that is
 3. what plugin looks like in widget demo3.png
 
 == Changelog ==
+= 1.4 =
+* Further bug fix for404 issues when My blog is installed in a subdirectory of webroot
+* Ensures unsubscription widget not show up after user unsubscrbe
+
 = 1.3 =
 * Fixing bug of wordpress under different repository of site and results 404(Using home_url() instead of get_site_url())
  
@@ -48,6 +52,10 @@ The plugin is configured to send email whenever a new post is PUBLISHED, that is
 *First version of this plugin
 
 == Upgrade Notice ==
+= 1.4 =
+* Further bug fix for404 issues when My blog is installed in a subdirectory of webroot
+* Ensures unsubscription widget not show up after user unsubscrbe
+
 = 1.3 =
 * Fixing bug of wordpress under different repository of site and results 404(Using home_url() instead of get_site_url())
 
