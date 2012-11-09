@@ -24,8 +24,12 @@ The simple email subscriber plugin allows user to register their email to the wo
 == Frequently Asked Questions ==
 
 = When will the email be send? =
-
 The plugin is configured to send email whenever a new post is PUBLISHED, that is if you schedule your post, it will send email only if the post is available to users.
+
+= Clicking the email subscription goes to a 404 page =
+Wordpress allows user to do all sort of random setups, which can mess up the url. This plugin uses one of the wordpress standard url getter: home_url() as your website homee link. to set it up, go to settings->general and define "wordpress address" to your blog home page.
+
+Alternatively, if you wants to use the get_site_url() method instead, feel free to go into the plugin code and change all the home_url() to get_site_url() and setup the "site address" to be your home url.
 
 
 == Screenshots ==
