@@ -16,10 +16,10 @@ The simple email subscriber plugin allows user to register their email to the wo
 
 
 == Installation ==
-  1. Download the plugin into the plugin folder 
-  2. Activate it through the plugins panel
-  3. Go to widget panel, and add the widget to your page(with fill in Subscription hint and successful message content
-  4. To manually unsubscribe an email, simply go to Settings -> simple email subscriber, and unsubscribe/add the email address you want. 
+1. Download the plugin into the plugin folder 
+1. Activate it through the plugins panel
+1. Go to widget panel, and add the widget to your page(with fill in Subscription hint and successful message content
+1. To manually unsubscribe an email, simply go to Settings -> simple email subscriber, and unsubscribe/add the email address you want. 
 
 == Frequently Asked Questions ==
 
