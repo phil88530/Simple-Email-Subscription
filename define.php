@@ -4,5 +4,5 @@ define('SIMPLE_EMAIL_SUBSCRIBER_PLUGIN_DIR', plugin_dir_path(__FILE__));  //plug
 define('SIMPLE_EMAIL_SUBSCRIBER_DB_NAME', $wpdb->prefix."email_subscription");
 define('SIMPLE_EMAIL_SUBSCRIBE_LOCATION', 'http://wordpress.org/extend/plugins/');
 define('SES_EMAIL_SENT_META', 'post_email_sent_on_publish');
-define('SES_PLUGIN_VERSION', "1.0");
+define('SES_PLUGIN_VERSION', "1.5");
 ?>

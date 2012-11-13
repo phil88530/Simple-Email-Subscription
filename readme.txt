@@ -38,6 +38,9 @@ Alternatively, if you wants to use the get_site_url() method instead, feel free 
 3. what plugin looks like in widget demo3.png
 
 == Changelog ==
+= 1.5 =
+* Added a successful message on the widget for subscription 
+
 = 1.4 =
 * Further bug fix for404 issues when My blog is installed in a subdirectory of webroot
 * Ensures unsubscription widget not show up after user unsubscrbe
@@ -56,6 +59,9 @@ Alternatively, if you wants to use the get_site_url() method instead, feel free 
 *First version of this plugin
 
 == Upgrade Notice ==
+= 1.5 =
+* Added a successful message on the widget for subscription
+
 = 1.4 =
 * Further bug fix for404 issues when My blog is installed in a subdirectory of webroot
 * Ensures unsubscription widget not show up after user unsubscrbe

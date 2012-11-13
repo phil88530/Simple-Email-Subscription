@@ -25,6 +25,8 @@ class email_subscriber{
     $rows_affected = $wpdb->insert(SIMPLE_EMAIL_SUBSCRIBER_DB_NAME, array('email' => $email));
     if(! $rows_affected ){
       error_log('deletion didnt work for subscriptions');
+    } else {
+      echo 'Thank you for subscribing to this blog, your email has been added to the subscription list.';
     }
 
     return $rows_affected;
