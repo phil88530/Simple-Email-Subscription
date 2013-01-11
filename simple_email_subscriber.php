@@ -27,7 +27,10 @@ include_once 'includes/email_subscriber.php';
 include_once 'includes/options_page.php';
 include_once 'includes/widget.php';
 
+//register the plugin url
+wp_enqueue_style('simple-email-subscriber-css', plugins_url('/simple_email_subscriber/stylesheets/style.css'));
 
+//register the plugin installation methods
 register_activation_hook(__FILE__, 'install_simple_subscriber_plugin');
 register_deactivation_hook(__FILE__, 'uninstall_simple_subscriber_plugin');
 

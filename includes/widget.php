@@ -30,7 +30,7 @@ class simple_email_subscription_widget {
     
     form_validator::process_form($data['success_msg']); //process subscription requests
     if(isset($_GET['unsubscribe']) && $_GET['unsubscribe']==true){
-      include SIMPLE_EMAIL_SUBSCRIBER_PLUGIN_DIR."admin_pages/unsubscription_widget.php";
+      include SIME_EMAIL_SUBSCRIBER_PLUGIN_DIR."admin_pages/unsubscription_widget.php";
     } else {
 		  include SIMPLE_EMAIL_SUBSCRIBER_PLUGIN_DIR."admin_pages/subscription_widget.php";
     }
