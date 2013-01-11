@@ -1,7 +1,7 @@
 === Simple Email Subscriber ===
 Contributors: phil88530
 Donate link: https://github.com/phil88530/Simple-Email-Subscription
-Tags: email, subscription, non-login
+Tags: email, subscription, non-login, widget
 Requires at least: 3.0.1
 Tested up to: 3.4
 Stable tag: 4.3
@@ -38,6 +38,12 @@ Alternatively, if you wants to use the get_site_url() method instead, feel free 
 3. what plugin looks like in widget demo3.png
 
 == Changelog ==
+= 2.0 =
+* can subscribe to only receive updates by categories
+* make the blog in obv place(first menu level) for LP blog
+* add options to adjust the look of the email that is sent out.(HTML format)
+* fixing bug of not able to customize success subscription message
+
 = 1.5 =
 * Added a successful message on the widget for subscription 
 
@@ -59,6 +65,12 @@ Alternatively, if you wants to use the get_site_url() method instead, feel free 
 *First version of this plugin
 
 == Upgrade Notice ==
+= 2.0 =
+* can subscribe to only receive updates by categories
+* make the blog in obv place(first menu level) for LP blog
+* add options to adjust the look of the email that is sent out.(HTML format)
+* fixing bug of not able to customize success subscription message
+
 = 1.5 =
 * Added a successful message on the widget for subscription
 

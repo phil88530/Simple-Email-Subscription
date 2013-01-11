@@ -26,7 +26,8 @@ class email_subscriber{
     if(! $rows_affected ){
       error_log('deletion didnt work for subscriptions');
     } else {
-      echo 'Thank you for subscribing to this blog, your email has been added to the subscription list.';
+      $data = get_option('simple_email_subscription_widget');
+      echo  $data['success_msg'].': <br />';
     }
 
     return $rows_affected;
