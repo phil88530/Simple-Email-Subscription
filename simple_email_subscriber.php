@@ -27,17 +27,17 @@ include_once 'includes/email_subscriber.php';
 include_once 'includes/options_page.php';
 include_once 'includes/widget.php';
 
-//register the plugin url
-wp_enqueue_style('simple-email-subscriber-css', plugins_url('/simple_email_subscriber/stylesheets/style.css'));
-
 //register the plugin installation methods
 register_activation_hook(__FILE__, 'install_simple_subscriber_plugin');
 register_deactivation_hook(__FILE__, 'uninstall_simple_subscriber_plugin');
 
-add_action('plugins_loaded', 'setup_plugin_actions');
+//register the plugin url
+wp_enqueue_style('simple-email-subscriber-css', plugins_url('/simple_email_subscriber/stylesheets/style.css'));
 
 function install_simple_subscriber_plugin(){
+  add_action('plugins_loaded', 'setup_plugin_actions');
   email_subscriber::install_database();
+  email_subscriber::update_database();
 }
 
 function setup_plugin_actions(){
@@ -52,9 +52,7 @@ function setup_plugin_actions(){
   $options_page = new options_page();
 }
 
-
 function uninstall_simple_subscriber_plugin(){
   remove_action('plugins_loaded', 'setup_plugin_actions');
 }
-
 ?>

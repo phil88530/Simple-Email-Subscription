@@ -15,6 +15,39 @@ class email_subscriber{
     //update db and make it auto adjust
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
     dbDelta($sql);
+  }
+
+  static function update_database(){
+    $sql= "ALTER TABLE  ".SIMPLE_EMAIL_SUBSCRIBER_DB_NAME."
+            ADD COLUMN `subscribe_all` TINYINT(1) DEFAULT 1,
+            ADD COLUMN `subscribe_category` varchar(512) DEFAULT NULL;";
+    
+    /*
+    $sql=
+      "DELIMITER $$
+      CREATE PROCEDURE Alter_Table()
+      BEGIN
+        DECLARE _count INT;
+          SET _count = (  SELECT COUNT(*) 
+                          FROM INFORMATION_SCHEMA.COLUMNS
+                          WHERE   TABLE_NAME = 'email_subscription' AND 
+                                  COLUMN_NAME = 'subscribe_all');
+          IF _count = 0 THEN
+              ALTER TABLE  ".SIMPLE_EMAIL_SUBSCRIBER_DB_NAME."
+                  ADD COLUMN `subscribe_all` TINYINT(1) DEFAULT 1,
+                  ADD COLUMN `subscribe_category` varchar(512) DEFAULT NULL;
+          END IF;
+      END $$
+      DELIMITER ;
+
+      CALL Alter_Table();
+
+      DROP PROCEDURE Alter_Table;
+      ";
+      */
+
+      global $wpdb;
+      $wpdb->query($wpdb->prepare($sql));
 
     //add the options for db defination
     add_option("ses_db_version", SES_PLUGIN_VERSION);
