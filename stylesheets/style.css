@@ -9,4 +9,9 @@ ui.subscription_categories  li{
   box-shadow: none !important;
   text-align: left;
   margin: 0;
+  color: black;
+}
+
+ui.subscription_categories  li .category{
+  margin-left: 10px;
 }

@@ -9,6 +9,7 @@ class form_validator{
     // If form was submitted
     if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['subscribe_submit'])) {
       $email_address = $_POST['new_subscription_email'];
+      $subscript_all = $_POST['all_category'];
 
       if(form_validator::check_email_is_valid($email_address) && $subscriber->email_not_subscribed($email_address)){
         //subscribe now
