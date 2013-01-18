@@ -87,6 +87,10 @@ class email_subscriber{
     $post = get_post($post_id);
     $post_categories = wp_get_post_categories($post_id);
 
+    //get the email footer
+    $email_footer_data = get_option('simple_email_subscription_widget');
+    $email_footer = $email_footer_data['email_footer'];
+      
     $notification_email_sent = get_post_meta($post_id,SES_EMAIL_SENT_META, true);
     error_log($notification_email_sent);
     if($notification_email_sent != ''){
@@ -120,7 +124,8 @@ class email_subscriber{
         $email_content = get_the_author_meta( 'display_name', $post->post_author )." has published a new post on $blog_name: ".$post->post_title;
         $email_content .= "<br/> <a href='".get_permalink($post->ID)."'> Check this new post </a>";
         $email_content .= "<br /> If you no longer wants to receive this update, you can ";
-        $email_content .= "<a href='".home_url()."?unsubscribe=true&email=".$subscriber->email."'> unsubscribe </a>";
+        $email_content .= "<a href='".home_url()."?unsubscribe=true&email=".$subscriber->email."'> unsubscribe </a><br />";
+        $email_content .= $email_footer;
         wp_mail($subscriber->email,$email_title, $email_content, $headers);
       }
     }

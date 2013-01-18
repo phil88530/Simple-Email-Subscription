@@ -5,7 +5,9 @@ register_deactivation_hook( __FILE__, array('simple_email_subscription_widget', 
 
 class simple_email_subscription_widget {
   function activate(){
-    $data = array( 'ses_subscription_hint' => 'Enter email to subscribe: ', 'ses_success_msg' => 'Your email subscription has now been set, you will get the latest updates whenever we have a new post !');
+    $data = array( 'ses_subscription_hint' => 'Enter email to subscribe: ', 
+      'ses_success_msg' => 'Your email subscription has now been set, you will get the latest updates whenever we have a new post !',
+      'ses_email_footer' => '');
     if ( ! get_option('simple_email_subscription_widget')){
       add_option('simple_email_subscription_widget' , $data);
     } else {
@@ -30,7 +32,7 @@ class simple_email_subscription_widget {
     
     form_validator::process_form($data['success_msg']); //process subscription requests
     if(isset($_GET['unsubscribe']) && $_GET['unsubscribe']==true){
-      include SIME_EMAIL_SUBSCRIBER_PLUGIN_DIR."admin_pages/unsubscription_widget.php";
+      include SIMPLE_EMAIL_SUBSCRIBER_PLUGIN_DIR."admin_pages/unsubscription_widget.php";
     } else {
 		  include SIMPLE_EMAIL_SUBSCRIBER_PLUGIN_DIR."admin_pages/subscription_widget.php";
     }

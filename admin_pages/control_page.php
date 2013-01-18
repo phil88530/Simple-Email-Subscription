@@ -8,10 +8,15 @@
   <p><label>Success Message: </label></p>
     <textarea name="ses_success_msg" cols="30" rows="4"
     type="text" > <?php echo $data['success_msg']; ?> </textarea>  
+
+  <p><label>Email Footer(Optional: html/text): </label></p>
+    <textarea name="ses_email_footer" cols="30" rows="4"
+    type="text" > <?php echo $data['email_footer']; ?> </textarea>  
 <?php  
   if (isset($_POST['ses_subscription_hint'])){
     $data['subscription_hint'] = attribute_escape($_POST['ses_subscription_hint']);
     $data['success_msg'] = attribute_escape($_POST['ses_success_msg']);
+    $data['email_footer'] = attribute_escape($_POST['ses_email_footer']);
     update_option('simple_email_subscription_widget', $data);
   }
 ?>
