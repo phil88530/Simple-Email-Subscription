@@ -21,6 +21,7 @@
 <form name="subscribe_email_form" action=<?php echo $action_url;?> method="post">
 
   <!-- display the category list -->
+  <label>Please select how you subscribe to us:</label><br/>
   <ui class='subscription_categories'>
     <li>
         <input type="radio" name="all_category" value="1" checked>
@@ -29,10 +30,10 @@
         <input type="radio" name="all_category" value="0">
           Specific Categories
     </li>
-  <label>Please select the categories: </label><br/>
+  <label>Please select the categories: (if not all)</label><br/>
 <?php
   foreach($categories as $category) { 
-    echo "<li><input class='category' type='checkbox' name='subscribe__category[]' value=$category->term_id checked='checked'> $category->name </li>";//get_category_link( $category->term_id )
+    echo "<li><input class='category' type='checkbox' name='subscribe_category[]' value=$category->term_id checked='checked'> $category->name </li>";//get_category_link( $category->term_id )
   } 
 
   echo "</ui>";

@@ -33,9 +33,9 @@ register_deactivation_hook(__FILE__, 'uninstall_simple_subscriber_plugin');
 
 //register the plugin url
 wp_enqueue_style('simple-email-subscriber-css', plugins_url('/simple_email_subscriber/stylesheets/style.css'));
+add_action('plugins_loaded', 'setup_plugin_actions');
 
 function install_simple_subscriber_plugin(){
-  add_action('plugins_loaded', 'setup_plugin_actions');
   email_subscriber::install_database();
   email_subscriber::update_database();
 }

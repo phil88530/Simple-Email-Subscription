@@ -21,30 +21,6 @@ class email_subscriber{
     $sql= "ALTER TABLE  ".SIMPLE_EMAIL_SUBSCRIBER_DB_NAME."
             ADD COLUMN `subscribe_all` TINYINT(1) DEFAULT 1,
             ADD COLUMN `subscribe_category` varchar(512) DEFAULT NULL;";
-    
-    /*
-    $sql=
-      "DELIMITER $$
-      CREATE PROCEDURE Alter_Table()
-      BEGIN
-        DECLARE _count INT;
-          SET _count = (  SELECT COUNT(*) 
-                          FROM INFORMATION_SCHEMA.COLUMNS
-                          WHERE   TABLE_NAME = 'email_subscription' AND 
-                                  COLUMN_NAME = 'subscribe_all');
-          IF _count = 0 THEN
-              ALTER TABLE  ".SIMPLE_EMAIL_SUBSCRIBER_DB_NAME."
-                  ADD COLUMN `subscribe_all` TINYINT(1) DEFAULT 1,
-                  ADD COLUMN `subscribe_category` varchar(512) DEFAULT NULL;
-          END IF;
-      END $$
-      DELIMITER ;
-
-      CALL Alter_Table();
-
-      DROP PROCEDURE Alter_Table;
-      ";
-      */
 
       global $wpdb;
       $wpdb->query($wpdb->prepare($sql));
@@ -53,9 +29,11 @@ class email_subscriber{
     add_option("ses_db_version", SES_PLUGIN_VERSION);
   }
 
-  function add_subscription($email){
+  function add_subscription($email, $subscribe_all, $subscribe_categories){
     global $wpdb;
-    $rows_affected = $wpdb->insert(SIMPLE_EMAIL_SUBSCRIBER_DB_NAME, array('email' => $email));
+    $rows_affected = $wpdb->insert(SIMPLE_EMAIL_SUBSCRIBER_DB_NAME, array('email' => $email, 
+      'subscribe_all' => $subscribe_all, 
+      'subscribe_category' => implode(",", $subscribe_categories)));
     if(! $rows_affected ){
       error_log('deletion didnt work for subscriptions');
     } else {
@@ -107,6 +85,7 @@ class email_subscriber{
   function on_publish_post($post_id){
     //get post information
     $post = get_post($post_id);
+    $post_categories = wp_get_post_categories($post_id);
 
     $notification_email_sent = get_post_meta($post_id,SES_EMAIL_SENT_META, true);
     error_log($notification_email_sent);
@@ -132,11 +111,18 @@ class email_subscriber{
     
     //email each subscriber
     foreach($subscription_list as $subscriber){
-      $email_content = get_the_author_meta( 'display_name', $post->post_author )." has published a new post on $blog_name: ".$post->post_title;
-      $email_content .= "<br/> <a href='".get_permalink($post->ID)."'> Check this new post </a>";
-      $email_content .= "<br /> If you no longer wants to receive this update, you can ";
-      $email_content .= "<a href='".home_url()."?unsubscribe=true&email=".$subscriber->email."'> unsubscribe </a>";
-      wp_mail($subscriber->email,$email_title, $email_content, $headers); 
+      //get the categories user subscribed
+      $subscribed_category = explode(',',$subscriber->subscribe_category);
+      $subscribed_to_category = count(array_intersect($subscribed_category, $post_categories));
+
+      //send notification if user subscribed to all or is the matched category
+      if($subscriber->subscribe_all || $subscribed_to_category){
+        $email_content = get_the_author_meta( 'display_name', $post->post_author )." has published a new post on $blog_name: ".$post->post_title;
+        $email_content .= "<br/> <a href='".get_permalink($post->ID)."'> Check this new post </a>";
+        $email_content .= "<br /> If you no longer wants to receive this update, you can ";
+        $email_content .= "<a href='".home_url()."?unsubscribe=true&email=".$subscriber->email."'> unsubscribe </a>";
+        wp_mail($subscriber->email,$email_title, $email_content, $headers);
+      }
     }
 
     //update the email meta to ensure not email anymore in the future
