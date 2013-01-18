@@ -14,16 +14,20 @@ class form_validator{
 
       if(form_validator::check_email_is_valid($email_address) && $subscriber->email_not_subscribed($email_address)){
         //subscribe now
-        if($subscriber->add_subscription($email_address,$subscript_all, $subscribe_categories)){
-          echo $success_msg."<hr/>";
-        }
+        $subscriber->add_subscription($email_address,$subscript_all, $subscribe_categories);
       } 
-    } else if ( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['unsubscribe_submit'])) {
+
+    } else if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['unsubscribe_submit'])) {
       $email_address = $_POST['unsubscribe_email'];
-      if($subscriber->remove_subscription($email_address)){
-        echo "You have been unsubscribed to our service. Thank you for following US.<hr />";
-      }
-    } 
+      $subscriber->remove_subscription($email_address);
+      
+    } else if($_SERVER["REQUEST_METHOD"] == "POST" &&  isset($_POST['modify_categories_submit'])){
+      $email_address = $_POST['subscriber_email'];
+      $subscript_all = $_POST['all_category']; //1(all) 0(individual)
+      $subscribe_categories = $_POST['subscribe_category'];        //subscribe now
+      $subscriber->update_subscription($email_address,$subscript_all, $subscribe_categories);
+     
+    }
   }
 
   /* Syntex Check Method */

@@ -39,10 +39,9 @@ Alternatively, if you wants to use the get_site_url() method instead, feel free 
 
 == Changelog ==
 = 2.0 =
-* can subscribe to only receive updates by categories
-* make the blog in obv place(first menu level) for LP blog
-* add options to adjust the look of the email that is sent out.(HTML format)
-* fixing bug of not able to customize success subscription message
+* can subscribe by categories
+* add options to adjust the look of the email with extra footer.(HTML/text format)
+* fixing bug of not able to customize success subscription message in the widget
 
 = 1.5 =
 * Added a successful message on the widget for subscription 
@@ -66,10 +65,9 @@ Alternatively, if you wants to use the get_site_url() method instead, feel free 
 
 == Upgrade Notice ==
 = 2.0 =
-* can subscribe to only receive updates by categories
-* make the blog in obv place(first menu level) for LP blog
-* add options to adjust the look of the email that is sent out.(HTML format)
-* fixing bug of not able to customize success subscription message
+* can subscribe by categories
+* add options to adjust the look of the email with extra footer.(HTML/text format)
+* fixing bug of not able to customize success subscription message in the widget
 
 = 1.5 =
 * Added a successful message on the widget for subscription
