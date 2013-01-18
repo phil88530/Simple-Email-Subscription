@@ -36,12 +36,14 @@ Alternatively, if you wants to use the get_site_url() method instead, feel free 
 1. adding subscription to widget demo1.png
 2. manage subscribers in the wordpress admin demo2.png
 3. what plugin looks like in widget demo3.png
+3. what profile page looks like in widget demo3.png
 
 == Changelog ==
 = 2.0 =
 * can subscribe by categories
 * add options to adjust the look of the email with extra footer.(HTML/text format)
 * fixing bug of not able to customize success subscription message in the widget
+* able to change your subscription profile page from email links.
 
 = 1.5 =
 * Added a successful message on the widget for subscription 
@@ -68,6 +70,7 @@ Alternatively, if you wants to use the get_site_url() method instead, feel free 
 * can subscribe by categories
 * add options to adjust the look of the email with extra footer.(HTML/text format)
 * fixing bug of not able to customize success subscription message in the widget
+* able to change your subscription profile page from email links.
 
 = 1.5 =
 * Added a successful message on the widget for subscription

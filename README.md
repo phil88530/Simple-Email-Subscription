@@ -16,3 +16,4 @@ http://wordpress.org/extend/plugins/simple-email-subscriber/changelog/
 ![demo picture1](https://raw.github.com/phil88530/Simple-Email-Subscription/master/screenshot-1.png)
 ![demo picture2](https://raw.github.com/phil88530/Simple-Email-Subscription/master/screenshot-2.png)
 ![demo picture3](https://raw.github.com/phil88530/Simple-Email-Subscription/master/screenshot-3.png)
+![demo picture4](https://raw.github.com/phil88530/Simple-Email-Subscription/master/screenshot-3.png)
