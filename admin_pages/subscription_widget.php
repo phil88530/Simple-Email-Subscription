@@ -21,8 +21,9 @@
 <form name="subscribe_email_form" action=<?php echo $action_url;?> method="post">
 
   <!-- display the category list -->
+  <div id='category_section' <?php echo ($data['category_option'] == 1)? '' : 'style="display:none;"' ?> >
   <label>Please select how you subscribe to us:</label><br/>
-  <ui class='subscription_categories'>
+  <ui class='subscription_categories' >
     <li>
         <input type="radio" name="all_category" value="1" checked>
          All Categories
@@ -38,6 +39,7 @@
 
   echo "</ui>";
   echo "<hr />";
+  echo "</div>";
 
   //display the subscription email entering fields
   echo $data['subscription_hint'].': <br />';

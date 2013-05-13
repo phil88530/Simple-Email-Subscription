@@ -7,7 +7,8 @@ class simple_email_subscription_widget {
   function activate(){
     $data = array( 'ses_subscription_hint' => 'Enter email to subscribe: ', 
       'ses_success_msg' => 'Your email subscription has now been set, you will get the latest updates whenever we have a new post !',
-      'ses_email_footer' => '');
+      'ses_email_footer' => '',
+      'ses_category_option' => 0);
     if ( ! get_option('simple_email_subscription_widget')){
       add_option('simple_email_subscription_widget' , $data);
     } else {
