@@ -39,6 +39,9 @@ Alternatively, if you wants to use the get_site_url() method instead, feel free 
 3. what profile page looks like in widget demo3.png
 
 == Changelog ==
+= 2.1 =
+* allow user to enable/disable category subscription
+
 = 2.0 =
 * can subscribe by categories
 * add options to adjust the look of the email with extra footer.(HTML/text format)
@@ -66,6 +69,9 @@ Alternatively, if you wants to use the get_site_url() method instead, feel free 
 *First version of this plugin
 
 == Upgrade Notice ==
+= 2.1 =
+* allow user to enable/disable category subscription
+
 = 2.0 =
 * can subscribe by categories
 * add options to adjust the look of the email with extra footer.(HTML/text format)
