@@ -8,6 +8,7 @@ class simple_email_subscription_widget {
     $data = array( 'ses_subscription_hint' => 'Enter email to subscribe: ', 
       'ses_subscription_description' => 'We would like to keep you updated with our blog. You can always stop the updates by clicking the \"unsubscribe\” link in the emails from us ',
       'ses_success_msg' => 'Your email subscription has now been set, you will get the latest updates whenever we have a new post !',
+      'ses_unsubscribe_content' => 'If you no longer wants to receive this update, or wants to change your subscription settings, you can',
       'ses_email_footer' => '',
       'ses_category_option' => 0);
     if ( ! get_option('simple_email_subscription_widget')){
