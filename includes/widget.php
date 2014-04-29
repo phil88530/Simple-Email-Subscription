@@ -6,6 +6,7 @@ register_deactivation_hook( __FILE__, array('simple_email_subscription_widget', 
 class simple_email_subscription_widget {
   function activate(){
     $data = array( 'ses_subscription_hint' => 'Enter email to subscribe: ', 
+      'ses_subscription_description' => 'We would like to keep you updated with our blog. You can always stop the updates by clicking the \"unsubscribe\” link in the emails from us ',
       'ses_success_msg' => 'Your email subscription has now been set, you will get the latest updates whenever we have a new post !',
       'ses_email_footer' => '',
       'ses_category_option' => 0);

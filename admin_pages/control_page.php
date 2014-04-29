@@ -7,7 +7,12 @@
   <p><label>Subscription Hint: </label></p>
   <input name="ses_subscription_hint"
       type="text" value="<?php echo $data['subscription_hint']; ?>" />
-  
+
+
+  <p><label>Subscription Description: </label></p>
+    <textarea name="ses_subscription_description" cols="30" rows="4"
+    type="text" > <?php echo $data['subscription_description']; ?> </textarea>  
+
   <p><label>Success Message: </label></p>
     <textarea name="ses_success_msg" cols="30" rows="4"
     type="text" > <?php echo $data['success_msg']; ?> </textarea>  
@@ -19,6 +24,7 @@
 <?php  
   if (isset($_POST['ses_subscription_hint'])){
     $data['subscription_hint'] = attribute_escape($_POST['ses_subscription_hint']);
+    $data['subscription_description'] = attribute_escape($_POST['ses_subscription_description']);
     $data['success_msg'] = attribute_escape($_POST['ses_success_msg']);
     $data['email_footer'] = attribute_escape($_POST['ses_email_footer']);
     $data['category_option'] = attribute_escape($_POST['ses_category_option']);

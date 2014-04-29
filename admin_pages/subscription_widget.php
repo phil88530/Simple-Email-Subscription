@@ -46,7 +46,9 @@
 ?>
   <input type="text" name="new_subscription_email" /> 
   <hr />
-  We would like to keep you updated with our blog. You can always stop the updates by clicking the 	&ldquo;unsubscribe&rdquo; link in the emails from us
+  <?php
+    echo $data['subscription_description'].' <br />';
+  ?>
   <br>
   <input type="submit" name="subscribe_submit" value="Subscribe" />
 </form>
