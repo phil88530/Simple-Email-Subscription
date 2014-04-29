@@ -39,6 +39,10 @@ Alternatively, if you wants to use the get_site_url() method instead, feel free 
 3. what profile page looks like in widget demo3.png
 
 == Changelog ==
+= 2.2 =
+* added unsubscribe email content modifiable in the widget pannel
+* added email subscription description modifiable in the widget pannel
+
 = 2.1 =
 * allow user to enable/disable category subscription
 
@@ -69,6 +73,10 @@ Alternatively, if you wants to use the get_site_url() method instead, feel free 
 *First version of this plugin
 
 == Upgrade Notice ==
+= 2.2 =
+* added unsubscribe email content modifiable in the widget pannel
+* added email subscription description modifiable in the widget pannel
+
 = 2.1 =
 * allow user to enable/disable category subscription
 
