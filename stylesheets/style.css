@@ -1,10 +1,10 @@
 /* subscription first level */
-ui.subscription_categories{
-  list-style: none; 
+ul.subscription_categories{
+  list-style: none;
 }
 
 /* subscription second level */
-ui.subscription_categories  li{
+ul.subscription_categories  li{
   background: none !important;
   box-shadow: none !important;
   text-align: left;
@@ -12,6 +12,6 @@ ui.subscription_categories  li{
   color: black;
 }
 
-ui.subscription_categories  li .category{
+ul.subscription_categories  li .category{
   margin-left: 10px;
 }

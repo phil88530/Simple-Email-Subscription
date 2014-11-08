@@ -13,7 +13,7 @@
     'include'                  => '',
     'number'                   => '',
     'taxonomy'                 => 'category',
-    'pad_counts'               => false 
+    'pad_counts'               => false
   );
   $categories=get_categories($args);  //get all the categories first
 
@@ -27,8 +27,8 @@
   <input hidden="hidden" name="subscriber_email" value=<?php echo $_GET['email']?> />
   <!-- display the category list -->
   <label>Update your subscription:</label><br/>
-  <ui class='subscription_categories'>
-    <li> 
+  <ul class='subscription_categories'>
+    <li>
         <input type="radio" name="all_category" value="1" <?php if($subscribed_all) echo 'checked'; ?> >
          All Categories
         <br />
@@ -37,13 +37,13 @@
     </li>
   <label>Please select the categories: (if not all)</label><br/>
 <?php
-  foreach($categories as $category) { 
+  foreach($categories as $category) {
     $already_subscribed = in_array($category->term_id, $subscribed_list);
     $checked_string = ($already_subscribed||$subscribed_all)? "checked='checked'":"";
     echo "<li><input class='category' type='checkbox' name='subscribe_category[]' value=$category->term_id $checked_string> $category->name </li>";//get_category_link( $category->term_id )
-  } 
+  }
 
-  echo "</ui>";
+  echo "</ul>";
 ?>
   <input type="submit" name="modify_categories_submit" value="Update Subscription" />
 </form>
@@ -54,4 +54,3 @@
   <input hidden="hidden" name="unsubscribe_email" value=<?php echo $_GET['email']?> />
   <input type="submit" name="unsubscribe_submit" value="Unsubscribe" />
 </form>
-

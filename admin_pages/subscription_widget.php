@@ -13,7 +13,7 @@
     'include'                  => '',
     'number'                   => '',
     'taxonomy'                 => 'category',
-    'pad_counts'               => false 
+    'pad_counts'               => false
   );
   $categories=get_categories($args);
 ?>
@@ -23,7 +23,7 @@
   <!-- display the category list -->
   <div id='category_section' <?php echo ($data['category_option'] == 1)? '' : 'style="display:none;"' ?> >
   <label>Please select how you subscribe to us:</label><br/>
-  <ui class='subscription_categories' >
+  <ul class='subscription_categories' >
     <li>
         <input type="radio" name="all_category" value="1" checked>
          All Categories
@@ -33,18 +33,18 @@
     </li>
   <label>Please select the categories: (if not all)</label><br/>
 <?php
-  foreach($categories as $category) { 
+  foreach($categories as $category) {
     echo "<li><input class='category' type='checkbox' name='subscribe_category[]' value=$category->term_id checked='checked'> $category->name </li>";//get_category_link( $category->term_id )
-  } 
+  }
 
-  echo "</ui>";
+  echo "</ul>";
   echo "<hr />";
   echo "</div>";
 
   //display the subscription email entering fields
   echo $data['subscription_hint'].': <br />';
 ?>
-  <input type="text" name="new_subscription_email" /> 
+  <input type="text" name="new_subscription_email" />
   <hr />
   <?php
     echo $data['subscription_description'].' <br />';
@@ -52,4 +52,3 @@
   <br>
   <input type="submit" name="subscribe_submit" value="Subscribe" />
 </form>
-
