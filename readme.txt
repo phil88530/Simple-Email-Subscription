@@ -3,7 +3,7 @@ Contributors: phil88530
 Donate link: https://github.com/phil88530/Simple-Email-Subscription
 Tags: email, subscription, non-login, widget
 Requires at least: 3.0.1
-Tested up to: 3.4
+Tested up to: 4.0
 Stable tag: 4.3
 License: OPEN SOURCE
 
@@ -39,6 +39,9 @@ Alternatively, if you wants to use the get_site_url() method instead, feel free 
 3. what profile page looks like in widget demo3.png
 
 == Changelog ==
+= 2.3 =
+Replaced ui element for ul
+
 = 2.2 =
 * added unsubscribe email content modifiable in the widget pannel
 * added email subscription description modifiable in the widget pannel
@@ -73,6 +76,9 @@ Alternatively, if you wants to use the get_site_url() method instead, feel free 
 *First version of this plugin
 
 == Upgrade Notice ==
+= 2.3 =
+Replaced ui element for ul
+
 = 2.2 =
 * added unsubscribe email content modifiable in the widget pannel
 * added email subscription description modifiable in the widget pannel
